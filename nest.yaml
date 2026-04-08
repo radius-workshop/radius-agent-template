@@ -1,0 +1,17 @@
+agent:
+  id: radius-payment-agent
+  name: Radius Payment Agent
+  description: Agent that sends/receives payments on the Radius network
+  domain: payments
+  specialization: wallet
+  capabilities: [a2a, payments]
+
+server:
+  host: 0.0.0.0
+  port: 6000
+
+registry:
+  url: https://successful-communication-production-ac96.up.railway.app
+
+telemetry:
+  enabled: true
