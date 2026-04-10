@@ -1,5 +1,7 @@
 nest @ git+https://github.com/projnanda/NEST-beta.git@fe681043e65816cd7b5319aac82c0bf5bc321174
 eth-account>=0.13.0
+eth-abi>=4.0.0
+eth-utils>=2.0.0
 httpx>=0.27.0
 python-dotenv>=1.0.0
 # Optional: enable natural-language mode

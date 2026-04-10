@@ -44,7 +44,11 @@ wallet_kwargs = {}
 if rpc_url:
     wallet_kwargs["rpc_url"] = rpc_url
 if chain_id:
-    wallet_kwargs["chain_id"] = int(chain_id)
+    try:
+        wallet_kwargs["chain_id"] = int(chain_id)
+    except ValueError:
+        print(f"Error: RADIUS_CHAIN_ID must be an integer, got: {chain_id!r}")
+        sys.exit(1)
 
 try:
     wallet = RadiusWallet(private_key, **wallet_kwargs)

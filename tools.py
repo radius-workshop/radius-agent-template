@@ -6,6 +6,8 @@ tool-calling schema. Tools work with both the LLM handler and the
 command router.
 """
 
+from __future__ import annotations
+
 from radius_wallet import RadiusWallet
 
 # Tool definitions (Anthropic tool-calling format)
@@ -85,7 +87,7 @@ def run_tool(wallet: RadiusWallet, tool_name: str, **kwargs) -> dict | str:
     if tool_name == "send_sbc":
         try:
             to = kwargs["to"]
-            amount = float(kwargs["amount"])
+            amount = kwargs["amount"]
             tx_hash = wallet.send_sbc(to, amount)
             receipt = wallet.wait_for_tx(tx_hash)
             return {
