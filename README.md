@@ -109,3 +109,7 @@ This template uses a **local private key** for signing. For production:
 1. Switch to [Privy](https://privy.io/) embedded wallets for secure key management
 2. Run the signer as a separate service (see Wallet Concierge architecture)
 3. Set `NANDA_WALLET_PROVIDERS=privy` and configure Privy env vars
+
+---
+
+> ⚠️ **Demo code — not production-ready.** Provided as-is, without warranty, and may contain known, unpatched vulnerabilities (including in dependencies). If you reuse it, run your own security and supply-chain scans and patch before deploying.
